@@ -13,6 +13,10 @@ git clone https://github.com/eike-sakurai/nixos-config
 cd nixos-config
 ```
 
+> [!NOTE]
+> You might want to change some configs, for example the username. Vim and Nano are installed by default on NixOS installation, so use it as your will.
+
+
 3. **Generate the NixOS default config**:
    
 ```
@@ -36,6 +40,6 @@ sudo nixos-install
 ```
 
 > [!NOTE]
-> The "initialHashedPassword", in another word, the password for user is "123321".
+> You can't login in SDDM yet, you have to press "Ctrl+Alt+F2" to exit SDDM, enter into root, set a password for your user by using the command "passwd [user]". After all that you can login on SDDM.
 
 ## Enjoy!

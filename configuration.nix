@@ -2,11 +2,11 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./configuration/packages.nix
-      ./configuration/modules/nvidia.nix
-      ./configuration/modules/audio.nix
-      ./configuration/modules/bluetooth.nix
-      ./configuration/modules/printing.nix
+      ./configurations/packages.nix
+      ./configurations/modules/nvidia.nix
+      ./configurations/modules/audio.nix
+      ./configurations/modules/bluetooth.nix
+      ./configurations/modules/printing.nix
     ];
 
   boot.loader.systemd-boot.enable = true;

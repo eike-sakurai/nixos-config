@@ -27,7 +27,7 @@ sudo rm -f /mnt/etc/nixos/configuration.nix
 4. **Move all my config files to /etc/nixos**:
    
 ```bash
-mv ./configuration /mnt/etc/nixos
+mv ./configurations /mnt/etc/nixos
 mv ./home-manager /mnt/etc/nixos
 mv ./configuration.nix /mnt/etc/nixos
 mv ./flake.nix /mnt/etc/nixos

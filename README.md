@@ -4,7 +4,6 @@ My personal NixOS config, honestly it's not great, but it's convenient to publis
 ## Installation
 ```
 git clone https://github.com/eike-sakurai/nixos-config
-mv nixos-config $HOME/nixos-config
 cd $HOME/nixos-config
 
 mv ./configuration /mnt/etc/nixos

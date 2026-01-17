@@ -1,5 +1,5 @@
 # My personal NixOS Config
-My personal NixOS config, honestly it's not great, but it's convenient to publish on GitHub.
+My personal NixOS config, honestly isn't great, but it's convenient to publish on GitHub.
 
 ## Installation
 

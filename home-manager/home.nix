@@ -1,7 +1,7 @@
 {
   imports = [
     ./packages.nix
-    ./modules/test.nix
+    ./modules/ranger.nix
   ];
 
   home.username = "eike-sakurai";

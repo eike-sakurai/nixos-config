@@ -4,7 +4,6 @@
 
   environment.systemPackages = with pkgs; [
     vim
-    kitty
     brightnessctl
     playerctl
   ];

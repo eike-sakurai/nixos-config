@@ -1,5 +1,6 @@
 {
-    settings = {
+    settings = 
+    {
       preview_images = true;
       preview_images_method = "ueberzug";
       draw_borders = true;

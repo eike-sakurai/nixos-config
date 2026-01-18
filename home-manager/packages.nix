@@ -2,6 +2,11 @@
 {
   home.packages = with pkgs; [
     firefox
-    kdePackages.dolphin
+    ranger
+    waybar
+    hyprpaper
+    alacritty
+    wofi
+    ueberzugpp
   ];
 }

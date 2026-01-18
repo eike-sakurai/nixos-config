@@ -1,3 +1,4 @@
+{config, ...}:
 {
   imports =
     [
@@ -16,6 +17,8 @@
   networking.networkmanager.enable = true;
 
   time.timeZone = "America/Sao_Paulo";
+
+  nixpkgs.config.allowUnfree = true;
 
   services.displayManager.sddm = {
     enable = true;

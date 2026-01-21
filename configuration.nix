@@ -21,8 +21,8 @@
     efiSupport = true;
     useOSProber = true;
     device = "nodev";
-  };
-};
+    };
+  };  
 
   networking.hostName = "eike-sakurai";
   networking.networkmanager.enable = true;

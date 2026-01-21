@@ -2,6 +2,7 @@
   imports = [
     ./packages.nix
     ./modules/ranger.nix
+    ./modueles/hyprland.nix
   ];
 
   home.username = "eike-sakurai";

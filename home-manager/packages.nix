@@ -8,5 +8,6 @@
     alacritty
     wofi
     ueberzugpp
+    neovim
   ];
 }

@@ -6,8 +6,19 @@
     ];
 
   ## BOOT LOADER
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot = {
+    loader = {     
+      efi.canTouchEfiVariables = true;
+      efi.efiSysMountPoint = "/boot";
+      grub.enable = true;
+      grub.efiSupport = true;
+      grub.device = "nodev";
+      grub.useOSProber = false;
+    };
+    supportedFilesystems = [
+      "exfat"
+    ];
+  };
   
   ## NETWORKING
   networking.hostName = "eike-sakurai";

@@ -1,5 +1,9 @@
 {config, pkgs, ...}:
 {
+  imports =
+    [
+      ./hardware-configuration.nix
+    ];
 
   ## BOOT LOADER
   boot.loader.systemd-boot.enable = false;
@@ -43,7 +47,6 @@
   Programs.hyprland.enable = true;
 
   ## AUDIO
-  { 
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -54,7 +57,6 @@
   };
   
   ## BLUETOOTH
-  { 
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;

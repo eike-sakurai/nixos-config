@@ -8,12 +8,16 @@
   ## BOOT LOADER
   boot = {
     loader = {     
-      efi.canTouchEfiVariables = true;
-      efi.efiSysMountPoint = "/boot";
-      grub.enable = true;
-      grub.efiSupport = true;
-      grub.device = "nodev";
-      grub.useOSProber = false;
+      efi = [
+        canTouchEfiVariables = true;
+        efiSysMountPoint = "/boot";
+      ];
+      grub = [
+        enable = true;
+        efiSupport = true;
+        device = "nodev";
+        useOSProber = false;
+      ]
     };
     supportedFilesystems = [
       "exfat"

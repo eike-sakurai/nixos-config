@@ -76,19 +76,20 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
   
- ## PRINTING
- services.avahi = {
-   enable = true;
-   nssmdns4 = true;
-   openFirewall = true;
+  ## PRINTING
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
 
- services.printing = {
-   enable = true;
-   drivers = with pkgs; [
-     cups-filters
-     cups-browsed
-   ];
- };
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [
+      cups-filters
+      cups-browsed
+    ];
+  };
 
   ## USERS
   users.users.eike-sakurai = {

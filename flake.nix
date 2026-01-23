@@ -18,7 +18,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.eike-sakurai = import ./home-manager/home.nix;
+            home-manager.users.eike-sakurai = import ./home.nix;
           }
         ];
       };

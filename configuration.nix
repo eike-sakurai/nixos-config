@@ -44,7 +44,7 @@
   };
   
   ## HYPRLAND
-  Programs.hyprland.enable = true;
+  programs.hyprland.enable = true;
 
   ## AUDIO
   services.pulseaudio.enable = false;

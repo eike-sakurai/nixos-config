@@ -4,7 +4,9 @@
   home.homeDirectory = "/home/eike-sakurai";
   home.stateVersion = "25.11";
   
-  ## PACKAGES
+################
+### PACKAGES ###
+################
   home.packages = with pkgs; [
     firefox
     ranger
@@ -27,7 +29,9 @@
     gamemode
   ];
   
-  ## RANGER
+##############
+### RANGER ###
+##############
   programs.ranger = {
     enable = true;
     settings = {
@@ -38,7 +42,9 @@
     };
   };
   
-  ## HYPRLAND
+################
+### HYPRLAND ###
+################
   wayland.windowManager.hyprland = {
     enable = true;
     settings = 

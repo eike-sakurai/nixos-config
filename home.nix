@@ -21,7 +21,6 @@
     kdePackages.kdenlive
     libreoffice-fresh
     godot-mono
-    gparted
 
     gamescope
     mangohud

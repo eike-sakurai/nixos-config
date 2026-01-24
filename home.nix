@@ -37,6 +37,7 @@
       draw_borders = true;
       w3m_delay = 0;
     };
+  };
   
   ## HYPRLAND
   wayland.windowManager.hyprland = {

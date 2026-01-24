@@ -14,6 +14,17 @@
     wofi
     ueberzugpp
     neovim
+
+    steam
+    discord
+    obs-studio
+    kdePackages.kdenlive
+    libreoffice-fresh
+    godot-mono
+
+    gamescope
+    mangohud
+    gamemode
   ];
   
   ## RANGER

@@ -5,7 +5,18 @@
       ./hardware-configuration.nix
     ];
 
-  ## BOOT LOADER
+################
+### PACKAGES ###
+################
+  environment.systemPackages = with pkgs; [
+    vim
+    brightnessctl
+    playerctl
+  ];
+
+###################
+### BOOT LOADER ###
+###################
   boot = {
     loader = {     
       efi = [
@@ -24,35 +35,42 @@
     ];
   };
   
-  ## NETWORKING
+###############
+### NETWORK ###
+###############
   networking.hostName = "eike-sakurai";
   networking.networkmanager.enable = true;
 
-  ## TIMEZONE
+################
+### TIMEZONE ###
+################
   time.timeZone = "America/Sao_Paulo";
 
-  ## ALLOW UNFREE PACKAGES
-  nixpkgs.config.allowUnfree = true;
+#############
+### USERS ###
+#############
+  users.users.eike-sakurai = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" "input" "networkmanager"];
+  };
   
-  ## PACKAGES
-  environment.systemPackages = with pkgs; [
-    vim
-    brightnessctl
-    playerctl
-  ];
-  
-  ## GREETER
+##########################
+### GREETER & HYPRLAND ###
+##########################
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
   };
   
-  ## HYPRLAND
   programs.hyprland.enable = true;
 
-  ## AUDIO
+#############
+### AUDIO ###
+#############
   services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
+  security.r###################
+### MY PROGRAMS ###
+###################tkit.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -60,13 +78,17 @@
     pulse.enable = true;
   };
   
-  ## BLUETOOTH
+#################
+### BLUETOOTH ###
+#################
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
   };
   
-  ## NVIDIA
+#########################
+### NVIDIA & GRAPHICS ###
+#########################
 
   hardware.graphics = {
     enable = true;
@@ -90,7 +112,10 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
-  ## PRINTING
+################
+### PRINTING ###
+################
+
   services.avahi = {
     enable = true;
     nssmdns4 = true;
@@ -105,13 +130,10 @@
     ];
   };
 
-  ## USERS
-  users.users.eike-sakurai = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" "input" "networkmanager"];
-  };
 
-  ## STYLIX
+##############
+### Stylix ###
+##############
   stylix = {
     enable = true;
     polarity = dark;
@@ -127,9 +149,12 @@
     };
   };
 
-  ## ALLOW FLAKES
+####################
+### ALLOW FLAKES ###
+####################
   nix.settings.experimental-features = [ "nix-command" "flakes"];
 
+  nixpkgs.config.allowUnfree = true;
   environment.pathsToLink = [ "/share/applications" "/share/xdg-desktop-portal" ];
   system.stateVersion = "25.11";
 

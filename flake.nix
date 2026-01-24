@@ -7,9 +7,13 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix = {
+      url = "github:danth/stylix/release-25.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, stylix, ... }: {
     nixosConfigurations = {
       eike-sakurai = nixpkgs.lib.nixosSystem {
         modules = [
@@ -21,6 +25,7 @@
             home-manager.users.eike-sakurai = import ./home.nix;
             home-manager.backupFileExtension = "backup";
           }
+          inputs.stylix.nixosModules.stylix
         ];
       };
     };

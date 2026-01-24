@@ -109,6 +109,22 @@
     extraGroups = [ "wheel" "input" "networkmanager"];
   };
 
+  ## STYLIX
+  stylix = {
+    enable = true;
+    polarity = dark;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/classic-dark.yaml";
+    cursor = {
+      name = "DMZ-Black";
+      size = 24;
+      package = pkgs.vanilla-dmz;
+    };
+    image = pkgs.fetchurl {
+      url = "https://downloadscdn5.freepik.com/download_vector/jpg/52/52683/20/20285/20285447_6227297.jpg?token=exp=1769244704~hmac=b112a1f64e9ac014f5f2dad1b0c5b2d3&filename=20285447_6227297.jpg";
+      sha256 = "fe80acebd38fc05cf53447b0f67deb2c2b039df7e310ddc4f8f818ea2177c48f`";
+    };
+  };
+
   ## ALLOW FLAKES
   nix.settings.experimental-features = [ "nix-command" "flakes"];
 
